@@ -1,0 +1,8 @@
+#!/bin/sh
+# Copyright (c) 2026 EUMETSAT
+# SPDX-License-Identifier: MIT
+# Adds Signed-off-by for the committer to every commit message (the DCO sign-off CONTRIBUTING.md asks for),
+# so `git commit -s` does not have to be remembered. Installed by `make setup` (core.hooksPath=.githooks).
+case "$2" in merge|squash) exit 0;; esac
+ident=$(git var GIT_COMMITTER_IDENT | sed 's/> .*/>/')
+git interpret-trailers --in-place --if-exists doNothing --trailer "Signed-off-by: $ident" "$1"

@@ -1,0 +1,11 @@
+# Component information
+name: eumetsat-skills-icon.svg
+description: Repository icon: a robot agent and a Metop-SG-style satellite orbiting the Earth (bespoke, EUMETSAT-owned vector artwork).
+copyright: Copyright (c) 2026 EUMETSAT
+license_spdx: CC-BY-4.0
+home_url: https://github.com/eumetsat/skills
+date: 2026-10-24
+# Package IPR documentation
+license_text_file: /LICENSE
+# File(s) associated to this component
+about_resource: eumetsat-skills-icon.svg

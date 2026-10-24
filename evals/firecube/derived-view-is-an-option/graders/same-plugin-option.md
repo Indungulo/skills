@@ -1,0 +1,6 @@
+---
+type: llm
+criteria: "The response provides the daily composite as an opt-in output of the SAME plugin, selected by a plugin option (a PluginConfig field passed with --option, e.g. output=daily), and it asks the operator which output should be the default rather than deciding that itself. It ports or reuses the notebook's composite_day routine rather than inventing a different binning or screening rule. It does not tell the operator to build a separate product, a separate plugin project, or a post-processing script instead, and it does not defer the composite to a later phase. When the composite's append dimension differs from the swath output's, a second ingestor class registered in the same plugin package (shared reader and options) counts as the same plugin; switching the append dimension at run time through run() or an underscore Firecube method does not pass. It names resolution or spacing and the variable as options."
+---
+
+Mechanism: derived views are options of the plugin that owns the data, and the default is the operator's choice. Pass only if the composite is delivered by the same plugin behind an option, the default is asked rather than assumed, and nothing is deferred to a separate product.

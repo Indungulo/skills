@@ -1,0 +1,6 @@
+---
+type: llm
+criteria: "The response tells the author not to return an empty list from discover_source_files and not to override run(). It relies on Firecube's resume contract instead, stated correctly for firecube 0.1.7 (the version this skill targets): rerunning with --option resume_existing=true over a window that overlaps existing timestamps skips the timestamps already present (the state-aware skip) and leaves the store unchanged, so no plugin code is needed to skip them; filter_item (a read-only check of the append coordinate and firecube_timestamp_state) is optional and only avoids preparing data core would skip anyway. The store is extended by rerunning with resume_existing=true over a genuinely new window; force_reingest=true overwrites, and a plain rerun without either flag is refused. It may note that firecube 0.1.5 refuses an overlapping resume ('Refusing overlapping resume append') instead of skipping. It keeps the run window (start/end) out of the store identity (slice_meta_keys/slice_meta)."
+---
+
+Mechanism: core owns completeness; discovery always returns the items and the flags decide. Pass only if the response rejects both the run() override and the empty discovery return, and states the 0.1.7 behaviour correctly: resume_existing=true skips already-present days on its own, without a refusal and without plugin code.

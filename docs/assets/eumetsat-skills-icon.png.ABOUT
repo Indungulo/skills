@@ -1,0 +1,11 @@
+# Component information
+name: eumetsat-skills-icon.png
+description: Repository icon rendered at 512 px from eumetsat-skills-icon.svg (bespoke, EUMETSAT-owned); header comments are not supported for this file type.
+copyright: Copyright (c) 2026 EUMETSAT
+license_spdx: CC-BY-4.0
+home_url: https://github.com/eumetsat/skills
+date: 2026-10-24
+# Package IPR documentation
+license_text_file: /LICENSE
+# File(s) associated to this component
+about_resource: eumetsat-skills-icon.png

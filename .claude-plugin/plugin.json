@@ -1,0 +1,14 @@
+{
+  "name": "eumetsat-skills",
+  "version": "0.1.0",
+  "description": "EUMETSAT agent skills: eumdac, ewccli, firecube, esf-satellite-data, feature-db-client",
+  "skills": "./skills/",
+  "author": {
+    "name": "Armagan Karatosun",
+    "email": "armagan.karatosun@eumetsat.int"
+  },
+  "license": "CC-BY-4.0 AND MIT",
+  "homepage": "https://github.com/eumetsat/skills",
+  "repository": "https://github.com/eumetsat/skills.git",
+  "icon": "./docs/assets/eumetsat-skills-icon.png"
+}
